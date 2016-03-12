@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="goldasorte">
+        <wb-resource deploy-path="/" source-path="/target/m2e-wtp/web-resources"/>
+        <wb-resource deploy-path="/" source-path="/WebContent" tag="defaultRootSource"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src"/>
+        <wb-resource deploy-path="/META-INF" source-path="/src/META-INF"/>
+        <wb-resource deploy-path="/WEB-INF/lib" source-path="/target/m2e-wtp"/>
+        <property name="context-root" value="goldasorte"/>
+        <property name="java-output-path" value="/goldasorte/build/classes"/>
+    </wb-module>
+</project-modules>

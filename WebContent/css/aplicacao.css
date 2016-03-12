@@ -1,0 +1,297 @@
+#nomeProjeto {
+	margin-left: 7px;
+	margin-right: 5px;
+	font-family: Arial, Verdana;
+	font-size: 12px;
+}
+
+#divFormularioDiario {
+	width: 600px;
+	margin: auto;
+}
+
+#divDescricaoDiario {
+	margin-top: 10px;
+}
+
+.buttonConfirmacao {
+	width: 195px;
+	margin: auto;
+	margin-top: 10px;
+}
+
+.buttonSalvar {
+	margin-left: 10px;
+	float: right;
+}
+
+.aba {
+	font-size: 14px;
+}
+
+/*CSS para os cabe�alhos das colunas nas tabelas do sistema*/
+.ui-datatable table {
+	font-size: 11px;
+}
+
+/*CSS para a font das linhas das tabelas do sistema*/
+.ui-widget-content {
+	font-size: 11px;
+}
+
+.ui-chkbox-box {
+	height: 13px !important;
+	width: 13px !important;
+}
+
+.ui-wizard-step-title {
+	font-size: 11px !important;
+}
+
+.ui-selectonemenu-label label {
+	margin-bottom: 0 !important;
+	margin-top: 0 !important;
+}
+
+.ui-button span {
+	margin: 0 7px 0 7px;
+}
+
+.link-mouseover:hover{
+	cursor: pointer;
+}
+
+.ui-picklist-caption {
+    font-size: 11px !important;
+}
+
+.ui-picklist .ui-picklist-list {
+    height: 200px !important;
+    list-style-type: none !important;
+    margin: 0 !important;
+    overflow: auto !important;
+    padding: 0 !important;
+    width: 320px !important;
+}
+
+
+/***** NOVAS CORES RISCO*****/
+.riscoVerde {
+    background-color: green;
+    color: #FFFFFF !important;
+}
+
+.riscoAmarelo {
+    background-color: yellow;
+    color: #000000 !important;
+}
+
+.riscoVermelho {
+    background-color: red;
+    color: #FFFFFF !important;
+}
+
+
+.tituloCaixa{
+	font-size: 15px;
+	font-weight: bold;
+	margin: 0px 0px 30px 0px;
+	text-align: center;
+}
+
+.buttonRelatorio1{
+	
+	font-size: 14px !important;
+	margin-top: 1% !important;
+	margin-left: 35% !important;
+	clear: both;
+	float: left;
+	}
+	.buttonRelatorio2{
+	font-size: 14px !important;
+	margin-top: 2% !important;
+	margin-left: 35% !important;
+	clear: both;
+	float: left;
+	}
+	
+	.buttonRelatorio3{
+	font-size: 14px !important;
+	margin-top: 2% !important;
+	margin-rigth: 10% !important;
+	
+	clear: both;
+	float: right;
+	}
+	.formRelatorio {
+	width: 400px;
+	height: 200px;
+	margin: auto;
+	text-align: center;
+	margin-top: 10px;
+}
+	.fieldsetExumacao {
+	width: 370px;
+	height: 120px;
+	float: center;
+	margin-left: 200px;
+	
+	}
+	
+	.divInputRelatorio {
+	width: 370px;
+	margin-left: 25px;
+	float:left;
+}
+
+.centralizar{
+	margin: auto;
+}
+
+.mensagemVerde {
+    font: 8px "Lucida Console", Monaco, monospace !important;
+    letter-spacing: -1px !important;
+    width: 310px !important;
+    float: center !important;
+    text-align: center !important;
+    text-shadow: 1px 1px 0 rgba(0,0,0,0.2) !important;
+    color:#00d700;
+}
+
+.mensagemVermelha {
+    font: 8px "Lucida Console", Monaco, monospace !important;
+    letter-spacing: -1px !important;
+    width: 310px !important;
+    float: center !important;
+    text-align: center !important;
+    text-shadow: 1px 1px 0 rgba(0,0,0,0.2) !important;
+    color:#fb0000;
+}
+.painelConsulta{
+	font-size: 15px !important
+}
+.consultaLote{
+	font-size: 12px !important;
+	margin-top: 10px !important;
+}
+.botaoConsulta{
+	margin-top: 10px;
+}
+
+.botaoPesquisa{
+	margin-right: 10px !important;
+}
+
+.caixaLote{
+	background-color: #EEEEEE;
+	width: 100% !important;
+	height: 100% !important;
+}
+.barraLote{
+	height: 1000px;
+	size: 100%;
+	width: 10px;
+	margin: 0;
+	background: #fff url(../imagem/bg_lote.gif);
+	background-size: 100%;
+}
+
+.posicaoLogin{
+	margin-top: 225px;
+	margin-rigth: 30px;
+}
+.introducao{
+	font-family: ;
+	font-size: 16px;
+	padding-top: 200px;
+	margin-top: 10px;
+}
+
+.formLogin {
+	width: 550px;
+	margin: auto;
+	margin-top: 70px;
+}
+
+.bemvindo{
+	float: left;
+	width: 45%;
+	padding: 5px 0px 5px 0px;
+	font-family: Arial;
+	font-size: 12px;
+	text-align: justify;
+}
+
+.login{
+	float: right;
+	width: 55%;
+	padding-top: 45px;
+}
+
+.estoque{
+	font-size: 20px !important;
+}
+
+.headerPainel {
+	font-size: 15px !important;
+	width: 99.3%;"
+}
+.botaoCadastro {
+	text-align: right;
+	float: right;
+	font-size:13px !important;
+}
+.opcaoPesquisa {
+	font-size: 12px !important;
+}
+
+.mensagensConsulta{
+	width: 1100px !important;
+}
+
+.fontPaginaFicha {
+	font-size: 16px !important;
+	font-weight: bold;
+}
+.dataFicha {
+	font-size: 14px !important;
+	font-weight: bold !important;
+}
+
+.ui-dialog-title{
+	margin-top: 12px !important;
+	font-size: 16px !important;
+	
+}
+
+#somaVantagens{
+	text-align: center !important;
+}
+
+.botaoLeft {
+	text-align: left;
+	float: left;
+}
+
+.navbar-default .navbar-nav>li>a{
+	font-size: 14px !important;
+}
+
+.submitButton{
+	font-size: 14px !important;
+	font-weight: bold !important;
+	
+}
+
+.inputHome{
+	font-size: 16px !important;
+	
+}
+
+.outputHome{
+	font-size: 16px !important;
+	font-weight: bold !important;
+} 
+
+
+
