@@ -6,11 +6,11 @@
         <provider>org.hibernate.ejb.HibernatePersistence</provider>
         <jta-data-source>java:/biometriaDS</jta-data-source>
 		
-			
 		<class>br.com.goldasorte.model.entity.Funcionario</class>
 		<class>br.com.goldasorte.model.entity.Usuario</class>
 		<class>br.com.goldasorte.model.entity.HorarioFuncionario</class>
 		
+
 		<properties>
 
 			<property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQLDialect" />
