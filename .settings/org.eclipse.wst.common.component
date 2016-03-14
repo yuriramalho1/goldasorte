@@ -5,6 +5,7 @@
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src"/>
         <wb-resource deploy-path="/META-INF" source-path="/src/META-INF"/>
         <wb-resource deploy-path="/WEB-INF/lib" source-path="/target/m2e-wtp"/>
+        <wb-resource deploy-path="/" source-path="/src/resources"/>
         <property name="context-root" value="goldasorte"/>
         <property name="java-output-path" value="/goldasorte/build/classes"/>
     </wb-module>

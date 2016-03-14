@@ -28,7 +28,7 @@ import br.com.goldasorte.util.SessionControl;
 
 
 
-
+//@Named
 @ManagedBean
 @javax.faces.bean.ViewScoped
 public class UsuarioBean implements Serializable {

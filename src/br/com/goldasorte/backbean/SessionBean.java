@@ -15,7 +15,7 @@ import br.com.goldasorte.util.SessionControl;
 
 
 
-
+//@Named
 @ManagedBean
 @javax.faces.bean.SessionScoped
 public class SessionBean implements Serializable {

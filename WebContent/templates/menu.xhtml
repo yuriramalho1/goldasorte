@@ -12,14 +12,21 @@
 		<b:navBar brand="Início" brandHref="#{request.contextPath}/login.jsf"
 			inverse="true" fixed="top" >
 
-			<b:navbarLinks rendered="#{sessionBean.loggedIn()}">
-				<b:navLink value="Cadastros" href="/pages/consultaUsuario.jsf"></b:navLink>
+			<b:navbarLinks >
+				<b:dropMenu id="cadastrosMenu" value="Cadastros"
+						iconAwesome="birthday-cake">
+						<b:navLink value="Usuários" href="#{administradorBean.inputUrl('usuarios.xhtml')}"></b:navLink>
+						<b:navLink value="Campeonatos" href="/pages/secretaria.jsf"></b:navLink>
+						<b:navLink value="Times" href="/pages/setores.jsf"></b:navLink>
+						<b:navLink value="Jogos" href="/pages/profissoes.jsf"></b:navLink>
+						<b:navLink value="Funcionários" href="/pages/funcionarios.jsf"></b:navLink>
+					</b:dropMenu>
 			</b:navbarLinks>
 			
 			<b:navbarLinks pull="right">
 
 			<div class="form-group" id="satanas">
-				<p:inputText placeholder="Login"
+				<b:inputText placeholder="Login"
 					rendered="#{!sessionBean.loggedIn()}" fieldSize="sm"
 					value="#{loginBean.usuario.login}"
 					style="margin-top:10px !important" />

@@ -7,16 +7,13 @@ import javax.faces.bean.ManagedBean;
 import javax.faces.context.FacesContext;
 import javax.inject.Inject;
 
-
-
-
 import br.com.goldasorte.model.entity.Usuario;
 import br.com.goldasorte.util.FacesUtil;
 import br.com.goldasorte.util.NavigationUtil;
 import br.com.goldasorte.util.SessionControl;
 
 
-
+//@Named
 @ManagedBean
 @javax.faces.bean.ViewScoped
 public class LoginBean implements Serializable {
@@ -42,8 +39,6 @@ public class LoginBean implements Serializable {
 	public void logar() {
 
 		usuario = session.login(usuario.getLogin(), usuario.getSenha());
-
-	
 
 	}
 	

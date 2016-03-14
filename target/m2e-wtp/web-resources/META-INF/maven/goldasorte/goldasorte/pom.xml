@@ -114,6 +114,7 @@
 
 
 		<!-- CDI -->
+		
 		<dependency>
 			<groupId>org.jboss.weld</groupId>
 			<artifactId>weld-core</artifactId>

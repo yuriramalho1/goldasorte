@@ -1,0 +1,43 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+
+
+	
+		<p:panel header="#{msg['usuario.search']}">
+		<h:form id="formCadastroUsuario" >
+			
+				<p:toolbar id="tbUsuarioCadastrar"  acceptcharset="ISO-8859-1">
+						    <f:facet name="left">
+								<p:commandButton value="#{msg['msg.comum.botao.salvar']}" ajax="true" actionListener="#{usuarioBean.salvar()}" 
+												 update=":panelCadastroUsuario, :tabViewUsuario:formCadastroUsuarioSecretaria:pgUsuarioSecretaria"
+												 icon="ui-icon-document" />
+								<p:commandButton value="#{msg['msg.comum.botao.pesquisar']}" ajax="true" immediate="true" icon="ui-icon-search"  
+												 update=":panelCadastroUsuario"
+								>
+									<p:ajax event="click"    
+											listener="#{usuarioBean.alterStatusRendered}" 
+											/>
+								</p:commandButton>
+								<p:commandButton value="#{msg['msg.comum.botao.novo']}" action="#{usuarioBean.acaoNovo()}" icon="ui-icon-document"  update=":panelCadastroUsuario" 
+									ajax="true" process="@this" 
+								/>
+								<p:commandButton icon="ui-icon-trash" onclick="PF('deletaDialogUsuario').show()"   
+									value="#{msg['msg.comum.botao.excluir']}" 
+									update=":formDeleteDialogUsuario"
+									process="@this"
+									rendered="#{usuarioBean.botaoApagarRendered}"
+													/>
+						    </f:facet>
+						    </p:toolbar>
+		
+		
+		</h:form>
+		</p:panel>
+	
+	
+	
+	</html>
