@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:b="http://bootsfaces.net/ui" 
+	xmlns:p="http://primefaces.org/ui">
+
+<h:form styleClass="navbar-form navbar-right"
+		acceptcharset="ISO-8859-1">
+
+		<b:navBar brand="Início" brandHref="#{request.contextPath}/login.jsf"
+			inverse="true" fixed="top" >
+
+			<b:navbarLinks rendered="#{sessionBean.loggedIn()}">
+				<b:navLink value="Cadastros" href="/pages/consultaUsuario.jsf"></b:navLink>
+			</b:navbarLinks>
+			
+			<b:navbarLinks pull="right">
+
+			<div class="form-group" id="satanas">
+				<p:inputText placeholder="Login"
+					rendered="#{!sessionBean.loggedIn()}" fieldSize="sm"
+					value="#{loginBean.usuario.login}"
+					style="margin-top:10px !important" />
+			</div>
+			<div class="form-group">
+				<p:password placeholder="Senha"
+					rendered="#{!sessionBean.loggedIn()}" fieldSize="sm"
+					value="#{loginBean.usuario.senha}"
+					style="height:30px !important; margin-top:10px !important;" />
+			</div> 
+                #{' '}
+                <b:commandButton action="a"
+				rendered="#{!sessionBean.loggedIn()}" value="Login" look="success"
+				actionListener="#{loginBean.logar()}"
+				style="margin-top:7px !important" iconAlign="right" />
+			
+		
+			  <b:dropMenu rendered="#{sessionBean.loggedIn()}" value="#{sessionBean.nomeUsuarioLogado()}">
+       		 	<b:commandButton look="link" value="Logout" actionListener="#{sessionBean.logout()}"   />
+       		 </b:dropMenu>
+		
+			</b:navbarLinks>
+			
+		
+		</b:navBar>
+			
+			
+	</h:form>
+
+
+</ui:composition>
+

@@ -7,10 +7,10 @@
         <provider>org.hibernate.ejb.HibernatePersistence</provider>
        	<jta-data-source>java:/goldasorteDS</jta-data-source>
 <!--         <jta-data-source>java:jboss/datasources/goldasorteDS</jta-data-source> -->
-  <!--           <jta-data-source>java:/PostgreSQLDS</jta-data-source> -->
-
+<!--             <jta-data-source>java:jboss/datasources/PostgreSQLDS</jta-data-source> -->
+	
+	<class>br.com.goldasorte.model.entity.Usuario</class> 
 	<class>br.com.goldasorte.model.entity.Funcionario</class>
-	<class>br.com.goldasorte.model.entity.Usuario</class>
 	<class>br.com.goldasorte.model.entity.HorarioFuncionario</class> 
 			
 		

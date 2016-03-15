@@ -1,6 +1,7 @@
 package br.com.goldasorte.backbean;
 
 import java.io.Serializable;
+import java.security.acl.Permission;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.GregorianCalendar;
@@ -16,6 +17,7 @@ import javax.inject.Inject;
 import org.primefaces.context.RequestContext;
 
 import br.com.goldasorte.enumeration.PerfilAcesso;
+import br.com.goldasorte.enumeration.TipoUsuario;
 import br.com.goldasorte.model.bo.FuncionarioBO;
 import br.com.goldasorte.model.bo.UsuarioBO;
 import br.com.goldasorte.model.entity.Funcionario;
@@ -24,6 +26,7 @@ import br.com.goldasorte.util.FacesUtil;
 import br.com.goldasorte.util.NavigationUtil;
 import br.com.goldasorte.util.SHA;
 import br.com.goldasorte.util.SessionControl;
+
 
 
 
@@ -47,9 +50,14 @@ public class UsuarioBean implements Serializable {
 	private String param;
 	private boolean editarSenha; 
 	
-	private boolean renderizarSecretaria;
-	private boolean renderSetor;
-	private boolean renderFuncionario;
+	private boolean statusRegister;
+	
+	
+	private boolean cadastroRendered;
+	private boolean pesquisaRendered;
+	private boolean botaoFecharRendered; 
+	private boolean botaoApagarRendered;
+	
 	
 	@Inject
 	private SessionControl session;
@@ -59,6 +67,12 @@ public class UsuarioBean implements Serializable {
 	
 	
 	private Funcionario funcionario;
+	
+	public UsuarioBean(){
+		this.botaoApagarRendered = false;
+		this.setCadastroRendered(false);
+		this.setPesquisaRendered(true);
+	}
 	
 	
 	
@@ -244,6 +258,26 @@ public class UsuarioBean implements Serializable {
 
 	}
 	
+	public void alterStatusRendered() {
+		if (cadastroRendered) {
+			setCadastroRendered(false);
+			setPesquisaRendered(true);
+		} else if (pesquisaRendered) {
+			setCadastroRendered(true);
+			setPesquisaRendered(false);
+		}
+	}
+	
+	public void acaoCadastrar(){
+		
+		this.alterStatusRendered();
+	}
+	
+	public void acaoAlterar(){
+		
+		this.alterStatusRendered();
+	}
+	
 
 
 	public void desabilitaUsuario(){
@@ -279,6 +313,8 @@ public class UsuarioBean implements Serializable {
 							"O usuário não foi encontrado.", ""));
 		}
 	}
+	
+	
 	
 
 	public void limpaBean(){
@@ -375,30 +411,6 @@ public class UsuarioBean implements Serializable {
 		this.session = session;
 	}
 
-	public boolean isRenderizarSecretaria() {
-		return renderizarSecretaria;
-	}
-
-	public void setRenderizarSecretaria(boolean renderizarSecretaria) {
-		this.renderizarSecretaria = renderizarSecretaria;
-	}
-
-	public boolean isRenderSetor() {
-		return renderSetor;
-	}
-
-	public void setRenderSetor(boolean renderSetor) {
-		this.renderSetor = renderSetor;
-	}
-
-	public boolean isRenderFuncionario() {
-		return renderFuncionario;
-	}
-
-	public void setRenderFuncionario(boolean renderFuncionario) {
-		this.renderFuncionario = renderFuncionario;
-	}
-
 
 	public Funcionario getFuncionario() {
 		return funcionario;
@@ -408,5 +420,53 @@ public class UsuarioBean implements Serializable {
 		this.funcionario = funcionario;
 	}
 
+	public boolean isStatusRegister() {
+		return statusRegister;
+	}
+
+	public void setStatusRegister(boolean statusRegister) {
+		this.statusRegister = statusRegister;
+	}
+
+	public boolean isCadastroRendered() {
+		return cadastroRendered;
+	}
+
+	public void setCadastroRendered(boolean cadastroRendered) {
+		this.cadastroRendered = cadastroRendered;
+	}
+
+	public boolean isPesquisaRendered() {
+		return pesquisaRendered;
+	}
+
+	public void setPesquisaRendered(boolean pesquisaRendered) {
+		this.pesquisaRendered = pesquisaRendered;
+	}
+
+	public boolean isBotaoFecharRendered() {
+		return botaoFecharRendered;
+	}
+
+	public void setBotaoFecharRendered(boolean botaoFecharRendered) {
+		this.botaoFecharRendered = botaoFecharRendered;
+	}
+
+	public boolean isBotaoApagarRendered() {
+		return botaoApagarRendered;
+	}
+
+	public void setBotaoApagarRendered(boolean botaoApagarRendered) {
+		this.botaoApagarRendered = botaoApagarRendered;
+	}
+
+	public FuncionarioBO getFuncionarioBO() {
+		return funcionarioBO;
+	}
+
+	public void setFuncionarioBO(FuncionarioBO funcionarioBO) {
+		this.funcionarioBO = funcionarioBO;
+	}
+	
 	
 }

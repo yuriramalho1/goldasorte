@@ -7,19 +7,16 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
-import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
-import javax.persistence.OneToOne;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
 import br.com.goldasorte.enumeration.PerfilAcesso;
 import br.com.goldasorte.util.SHA;
+
 
 
 @Entity
@@ -50,9 +47,9 @@ public class Usuario implements Serializable {
 	@Column(nullable=false)
 	private String sobrenome;
 	
-	@ManyToOne(fetch = FetchType.EAGER)
-	@JoinColumn(name = "id_funcionario", referencedColumnName = "id")
-	private Funcionario funcionario;
+	@Column
+	private String cpf;
+	
 	
 	
 	public String getNome() {
@@ -157,14 +154,15 @@ public class Usuario implements Serializable {
 		this.sobrenome = sobrenome;
 	}
 
-	public Funcionario getFuncionario() {
-		return funcionario;
+	public String getCpf() {
+		return cpf;
 	}
 
-	public void setFuncionario(Funcionario funcionario) {
-		this.funcionario = funcionario;
+	public void setCpf(String cpf) {
+		this.cpf = cpf;
 	}
 
+	
 	
 
 }
