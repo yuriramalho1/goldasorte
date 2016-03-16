@@ -9,13 +9,13 @@
 <h:form styleClass="navbar-form navbar-right"
 		acceptcharset="ISO-8859-1">
 
-		<b:navBar brand="Início" brandHref="#{request.contextPath}/login.jsf"
+		<b:navBar  brandHref="#{request.contextPath}/login.jsf"
 			inverse="true" fixed="top" >
 
 			<b:navbarLinks >
 				<b:dropMenu id="cadastrosMenu" value="Cadastros"
 						iconAwesome="birthday-cake">
-						<b:navLink value="Usuários" href="#{administradorBean.inputUrl('usuarios.xhtml')}"></b:navLink>
+						<b:navLink value="Usuários" href="#{administradorBean.inputUrl('usuario.xhtml')}"></b:navLink>
 						<b:navLink value="Campeonatos" href="/pages/secretaria.jsf"></b:navLink>
 						<b:navLink value="Times" href="/pages/setores.jsf"></b:navLink>
 						<b:navLink value="Jogos" href="/pages/profissoes.jsf"></b:navLink>

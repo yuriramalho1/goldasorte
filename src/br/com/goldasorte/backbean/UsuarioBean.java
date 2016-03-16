@@ -15,6 +15,7 @@ import javax.faces.model.SelectItem;
 import javax.inject.Inject;
 
 import org.primefaces.context.RequestContext;
+import org.primefaces.event.SelectEvent;
 
 import br.com.goldasorte.enumeration.PerfilAcesso;
 import br.com.goldasorte.enumeration.TipoUsuario;
@@ -269,14 +270,13 @@ public class UsuarioBean implements Serializable {
 	}
 	
 	public void acaoCadastrar(){
-		
+		this.usuario = new Usuario();
+		if(statusRegister == false){
+			this.statusRegister = true;
+		}
 		this.alterStatusRendered();
 	}
 	
-	public void acaoAlterar(){
-		
-		this.alterStatusRendered();
-	}
 	
 
 
@@ -314,6 +314,32 @@ public class UsuarioBean implements Serializable {
 		}
 	}
 	
+	public void selecionarObjetoEvent(SelectEvent event) {
+		this.usuario = (Usuario) event.getObject();
+		
+		}
+	
+	
+	public void acaoAlterar() throws NoSuchFieldException, SecurityException,
+			InstantiationException, IllegalAccessException {
+		if (this.usuario.getId() == null) {
+			FacesContext.getCurrentInstance().addMessage(null,
+					new FacesMessage(FacesMessage.SEVERITY_WARN,
+							"O usuário não foi selecionado.", ""));
+		} else {
+			this.setStatusRegister(false);
+			botaoApagarRendered = true;
+			setCadastroRendered(true);
+			setPesquisaRendered(false);
+		}
+	}
+	
+	public void limpar(){
+		this.usuario = new Usuario();
+		this.statusRegister = true;
+		this.botaoApagarRendered = false;
+	}
+
 	
 	
 

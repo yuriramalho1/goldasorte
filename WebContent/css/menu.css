@@ -319,6 +319,13 @@
 	font-size: 12px !important;
 	font-weight: bold !important;
 }
+
+.navbar-inverse .navbar-nav>li>a{
+	color: #B1AFAF;
+	font-size: 16px;
+	font-weight: bold;
+	font-family: sans-serif;
+}
 	
 
 
